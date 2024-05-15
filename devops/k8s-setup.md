@@ -16,8 +16,7 @@ Command to switch from GUI to CLI:
 ```
 systemctl isolate multi-user.target
 ```
-#### Install Open-SSH
-Command to switch from GUI to CLI:
+### Install Open-SSH
 ```
 sudo apt install openssh-server
 ```
