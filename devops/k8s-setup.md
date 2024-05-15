@@ -1,7 +1,7 @@
-# Kubernetes Cluster Setup (Onpremise)
+# Kubernetes Cluster Setup (On Premise)
 This is the instruction with step by step to set up a kubernetes cluster onpremise.
 
-## Setup on Ubuntu Server
+## ==> Setup on Ubuntu Server
 Cluster with 1 Control Plane Node and 1 Worker Node
 ### Change the IP Address of the Server to Manual
 #### Using GUI
@@ -18,5 +18,5 @@ systemctl isolate multi-user.target
 
 
 
-## Setup on Centos Server
+## ==> Setup on Centos Server
 Cluster with 3 Control Plane Nodes, 2 Worker Nodes, 1 NFS Server and 1 CICD Server
