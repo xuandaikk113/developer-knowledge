@@ -20,6 +20,32 @@ systemctl isolate multi-user.target
 ```
 sudo apt install openssh-server
 ```
+### Install Open-SSH
+```
+sudo apt install openssh-server
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
