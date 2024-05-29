@@ -1,8 +1,8 @@
 # Persona Pattern
 
 - Prompt structure:
-  ..+ Act as X
-  ..+ You are X
+   + Act as X
+   + You are X
 
 - Examples:
   ++ Act as a 5 years old child, ...
