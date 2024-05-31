@@ -80,3 +80,5 @@ Before you perform above request, please summary my quest to make sure you under
 Sau khi có một task hoàn chỉnh từ AI, đừng vội dụng. Hãy dùng 1 loop chat mới, với full nội dung AI cũ đã làm và yêu cầu AI mới đánh giá/check lại
 # Fact bạn cần hiểu về LLMs
 ## Fact 1 : Giới hạn về context window
+## Fact 2 : Giới hạn về độ dài output (trả kết quả)
+## Fact 3 : Giới hạn về bộ nhớ tạm thời
