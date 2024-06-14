@@ -1,6 +1,4 @@
-# SQL
-
-### Transaction
+## SQL Transaction
 
 TRANSACTION trong SQL là tiến trình thực hiện một nhóm các câu lệnh SQL. Các câu lệnh này được thực thi một cách tuần tự
 và độc lập. Một Transaction được thực hiện thành công khi tất cả câu lệnh đều thành công, khi đó tất cả các thay đổi dữ
@@ -8,7 +6,7 @@ liệu được thực hiện trong Transaction được lưu vào cơ sở dữ
 bộ tiến trình sẽ thất bại, đồng nghĩa với việc dữ liệu phải rollback về trạng thái ban đầu (dữ liệu được khôi phục về
 trạng thái trước khi thực hiện Transaction).
 
-#### 1. Xử lý trong Transaction
+### 1. Xử lý trong Transaction
 
 Trong SQL, có các lệnh sau được sử dụng để điều khiển Transaction:
 
@@ -21,7 +19,7 @@ Trong SQL, có các lệnh sau được sử dụng để điều khiển Transa
 **Lưu ý:
 ** `Các lệnh điều khiển Transaction chỉ được sử dụng với các lệnh thao tác dữ liệu như INSERT, UPDATE và DELETE. Tuy nhiên chúng không thể được sử dụng trong lệnh CREATE TABLE hoặc DROP TABLE vì các hoạt động này được tự động xác định trong cơ sở dữ liệu.`
 
-#### 2. Lệnh COMMIT trong SQL
+### 2. Lệnh COMMIT trong SQL
 
 Transaction kết thúc với một trong hai câu lệnh COMMIT hoặc ROLLBACK.
 
@@ -65,7 +63,7 @@ Vì vậy, một hàng từ bảng sẽ bị xóa và câu lệnh SELECT sẽ ch
 | 6  |  Cao  |  1989   |   HCM    | 1500.00 |
 | 7  | Long  |  1995   |  Hanoi   | 1000.00 |
 
-#### 3. Lệnh ROLLBACK trong SQL
+### 3. Lệnh ROLLBACK trong SQL
 
 Lệnh ROLLBACK là lệnh điều khiển Transaction được sử dụng để trao trả Transaction về trạng thái trước khi có các thay
 đổi mà chưa được lưu tới Database. Lệnh ROLLBACK chỉ có thể được sử dụng để undo các Transaction trước khi xác nhận bằng
@@ -110,7 +108,7 @@ lệnh SELECT sẽ cho kết quả:
 | 6  |  Cao  |  1989   |   HCM    | 1500.00 |
 | 7  | Long  |  1995   |  Hanoi   | 1000.00 |
 
-#### 4. Lệnh SAVEPOINT trong SQL
+### 4. Lệnh SAVEPOINT trong SQL
 
 SAVEPOINT là một điểm trong một Transaction giúp bạn có thể lùi Transaction trở lại một điểm nhất định mà không cần lùi
 Transaction về trạng thái đầu trước khi có thay đổi đó.
@@ -177,21 +175,21 @@ Vì vậy chỉ có hoạt động xóa đầu tiên diễn ra sau khi bạn ROL
 | 6  | Cao  |  22  |  HCM   |  4500.00 |
 | 7  | Lam  |  24  | Hanoi  | 10000.00 |
 
-#### 5. Lệnh RELEASE SAVEPOINT trong SQL
+### 5. Lệnh RELEASE SAVEPOINT trong SQL
 Lệnh SAVEPOINT RELEASE được sử dụng để loại bỏ một SAVEPOINT mà bạn đã tạo ra. Khi SAVEPOINT bị xóa, bạn không thể sử dụng lệnh ROLLBACK để hoàn tác các Transaction về SAVEPOINT đó nữa. Kiểu như trong Git mà xóa một commit nào đó mình không muốn dùng nữa vậy.
 
 Cú pháp của SAVEPOINT RELEASE như sau:
 ```
 RELEASE SAVEPOINT TEN_SAVEPOINT;
 ```
-#### 6. Lệnh SET TRANSACTION trong SQL
+### 6. Lệnh SET TRANSACTION trong SQL
 SET TRANSACTION có thể được sử dụng để khởi tạo một Database Transaction. Lệnh này được sử dụng để chỉ định các đặc tính cho Transaction đó. Ví dụ, bạn có thể chỉ định một Transaction chỉ được đọc (read only) hoặc đọc viết (read write).
 
 Cú pháp cơ bản của lệnh SET TRANSACTION trong SQL như sau:
 ```
 SET TRANSACTION [ READ WRITE | READ ONLY ];
 ```
-#### 7. Tổng kết
+### 7. Tổng kết
 - Lệnh `COMMIT` để lưu những thay đổi sau khi Transaction đã hoàn thành
 - Lệnh `ROLLBACK` là để quay lại những điểm `SAVEPOINT` hoặc là quay lại trạng thái trước khi TranSaction được thực hiện nếu có bất kỳ một lệnh bị lỗi.
 - `SAVEPOINT` là tạo ra các điểm lưu trữ tại thời điểm nào đó.
