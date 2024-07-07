@@ -20,11 +20,40 @@ systemctl isolate multi-user.target
 ```
 sudo apt install openssh-server
 ```
-### Install Open-SSH
+### Disable Firewall
 ```
-sudo apt install openssh-server
+sudo systemctl stop firewalld
+sudo systemctl disable firewalld
 ```
-
+### Configure IP Forward
+```
+sudo sysctl -w net.ipv4.ip_forward=1
+```
+### Configure Hosts file
+```
+sudo vim /etc/hosts
+```
+### Configure Hostname
+```
+sudo vim /etc/hostname
+sudo reboot
+```
+### Generate SSH key for faster SSH
+```
+ssh-keygen
+```
+Press Enter multiple times after ssh-keygen command
+```
+ssh-copy-id worker1
+```
+In case want to remove old key, use command below:
+```
+ssh-keygen -R <host>
+```
+### Install necessary packages
+```
+sudo apt install vim tree curl wget
+```
 
 
 
