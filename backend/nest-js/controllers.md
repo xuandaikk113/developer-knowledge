@@ -1,0 +1,2 @@
+# Controllers
+Controller đóng vai trò tạo ra cái route CRUD, xử lý các thông số truyền nhận như request param, request body, ... và truyền xuống service, service sẽ chịu trách nhiệm xử lý các data này và làm việc trực tiếp với database
